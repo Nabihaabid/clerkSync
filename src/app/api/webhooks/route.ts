@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
     const eventType = evt.type;
 
     console.log(`Received webhook with ID ${id} and event type of ${eventType}`);
-    // console.log("Webhook payload:", evt.data);
+    console.log("Webhook payload:", evt.data);
 
     if (evt.type === "user.created") {
       console.log("userId:", evt.data.id);
@@ -20,6 +20,6 @@ export async function POST(req: NextRequest) {
     return new Response("Webhook received", { status: 200 });
   } catch (err) {
     console.error("Error verifying webhook:", err);
-    return new Response("Error verifying webhook", { status: 400 });
-  }
+    return new Response("Error verifying webhook", { status: 400 });
+  }
 }

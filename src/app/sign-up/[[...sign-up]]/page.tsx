@@ -1,10 +1,10 @@
 import { SignUp } from "@clerk/nextjs";
-import React from "react";
 
-export default function signUp() {
+export default function Page() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+    <div className="min-h-[90vh] flex items-center justify-center bg-gray-950 text-white">
       <SignUp />
+         
     </div>
   );
 }
